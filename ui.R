@@ -1,0 +1,46 @@
+library(shiny)
+shinyUI(pageWithSidebar(
+  headerPanel("Znaxodjennya vuznachnuka v matruzi 4x4"),
+  sidebarPanel(
+    numericInput("a11", "a11=", 0),
+    numericInput("a12", "a12=", 1),
+    numericInput("a13", "a13=", 2),
+    numericInput("a14", "a14=", 3),
+    numericInput("a21", "a21=", 4),
+    numericInput("a22", "a22=", 5),
+    numericInput("a23", "a23=", 6),
+    numericInput("a24", "a24=", 7),
+    numericInput("a31", "a31=", 8),
+    numericInput("a32", "a32=", 9),
+    numericInput("a33", "a33=", 10),
+    numericInput("a34", "a34=", 11),
+    numericInput("a41", "a41=", 12),
+    numericInput("a42", "a42=", 13),
+    numericInput("a43", "a43=", 14),
+    numericInput("a44", "a44=", 15),
+    submitButton('Save')
+  ),
+  mainPanel(
+    h3("Matrix 4x4"),
+    verbatimTextOutput("a"),
+    h3("Matrix1 3x3"),
+    verbatimTextOutput("b1"),
+    h3("Vuznachnuk1"),
+    verbatimTextOutput("c1"),
+    h3("Matrix2 3x3"),
+    verbatimTextOutput("b2"),
+    h3("Vuznachnuk2"),
+    verbatimTextOutput("c2"),
+    h3("Matrix3 3x3"),
+    verbatimTextOutput("b3"),
+    h3("Vuznachnuk3"),
+    verbatimTextOutput("c3"),
+    h3("Matrix4 3x3"),
+    verbatimTextOutput("b4"),
+    h3("Vuznachnuk4"),
+    verbatimTextOutput("c4"),
+    h5("Vuznachnuk = a11*Vuznachnuk1 - a12*Vuznachnuk2 + a13*Vuznachnuk3 - a14*Vuznachnuk4"),
+    h3("Vusnachnuk"),
+    verbatimTextOutput("b")
+  )
+))
